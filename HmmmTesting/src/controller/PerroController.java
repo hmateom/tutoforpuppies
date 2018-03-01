@@ -20,12 +20,16 @@ public class PerroController {
         for(int i=0; i<4;i++){
             System.out.println("Woof!");
         }
+        acciones[0]++;
+        p.setAccionesHechas(acciones);
     }
     
     public void sentar(Perro p){
         int [] acciones = p.getAccionesHechas();
         System.out.println(p.getNombre() + " se va a sentar...");
         System.out.println(p.getNombre() + " se ha sentado");
+        acciones[1]++;
+        p.setAccionesHechas(acciones);
     }
     
     public void consultarAccionesPerro(Perro p){
