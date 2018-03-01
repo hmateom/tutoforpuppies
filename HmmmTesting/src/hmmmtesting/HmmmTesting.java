@@ -5,6 +5,10 @@
  */
 package hmmmtesting;
 
+import controller.PerroController;
+import java.util.Scanner;
+import model.Perro;
+
 /**
  *
  * @author hmateo
@@ -16,9 +20,34 @@ public class HmmmTesting {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Who let the dogs out?");
-        for(int i=0; i<4;i++){
-            System.out.println("Woof!");
+        int option = -1;
+        while (option !=0){
+            System.out.println("##### Gestión de Perros Virtuales #####");
+            System.out.println("[1] Nuevo Perro");
+            System.out.println("[2] Consultar acciones realizadas por el Perro");
+            System.out.println("[3] Haz que el Perro cante");
+            System.out.println("[4] Sentar al Perro");
+            System.out.println("[5] Haz que el Perro ladre");
+            System.out.println("[0] Salir");
+            System.out.println("#####################################");
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Seleccione una opción: ");
+            option = sc.nextInt();
+            PerroController pc = new PerroController();
+            Perro p = pc.perroPorDefecto();
+            switch(option){
+                case 3:
+                    pc.cantar(p);
+                    break;
+                case 4:
+                    pc.sentar(p);
+                    break;
+                case 0:
+                    System.out.println("¡Hasta la próxima");
+                    break;
+                default:
+                    System.out.println("Opción no soportada");
+            }
         }
     }
     
