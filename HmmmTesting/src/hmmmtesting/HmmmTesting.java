@@ -21,6 +21,8 @@ public class HmmmTesting {
     public static void main(String[] args) {
         // TODO code application logic here
         int option = -1;
+        PerroController pc = new PerroController();
+        Perro p = pc.perroPorDefecto();
         while (option !=0){
             System.out.println("##### Gestión de Perros Virtuales #####");
             System.out.println("[1] Nuevo Perro");
@@ -33,9 +35,10 @@ public class HmmmTesting {
             Scanner sc = new Scanner(System.in);
             System.out.print("Seleccione una opción: ");
             option = sc.nextInt();
-            PerroController pc = new PerroController();
-            Perro p = pc.perroPorDefecto();
             switch(option){
+                case 2:
+                    pc.consultarAccionesPerro(p);
+                    break;
                 case 3:
                     pc.cantar(p);
                     break;

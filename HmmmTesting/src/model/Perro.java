@@ -5,7 +5,6 @@
  */
 package model;
 
-import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -61,6 +60,6 @@ public class Perro {
     }
 
     public void setAccionesHechas(int[] accionesHechas) {
-        this.accionesHechas = Arrays.copyOf(accionesHechas, accionesHechas.length);
+        this.accionesHechas = accionesHechas;
     }
 }
