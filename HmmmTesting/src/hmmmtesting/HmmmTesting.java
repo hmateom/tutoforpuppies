@@ -23,11 +23,11 @@ public class HmmmTesting {
         int option = -1;
         while (option !=0){
             System.out.println("##### Gestión de Perros Virtuales #####");
-            System.out.println("[1] Nuevo Perro");
+            //System.out.println("[1] Nuevo Perro");
             System.out.println("[2] Consultar acciones realizadas por el Perro");
             System.out.println("[3] Haz que el Perro cante");
             System.out.println("[4] Sentar al Perro");
-            System.out.println("[5] Haz que el Perro ladre");
+            //System.out.println("[5] Haz que el Perro ladre");
             System.out.println("[0] Salir");
             System.out.println("#####################################");
             Scanner sc = new Scanner(System.in);
